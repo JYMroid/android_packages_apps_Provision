@@ -33,6 +33,8 @@ public class DefaultActivity extends Activity {
 
         // Add a persistent setting to allow other apps to know the device has been provisioned.
         Settings.Secure.putInt(getContentResolver(), Settings.Secure.DEVICE_PROVISIONED, 1);
+	    Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADB_ENABLED, 1);
+	    Settings.System.putInt(getContentResolver(), Settings.System.VIBRATE_WHEN_RINGING, 1);
 
         // remove this activity from the package manager.
         PackageManager pm = getPackageManager();
